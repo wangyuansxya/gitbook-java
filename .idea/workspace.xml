@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db493440-ef53-41d2-866c-f4dea4870e32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/repository/Jvm/Jvm_garbage_collection_mechanism.md" beforeDir="false" afterPath="$PROJECT_DIR$/repository/Jvm/garbage_collection_mechanism.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/JavaSE/annotation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/concurrent/AtomicInteger.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/concurrent/Executer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/concurrent/Producer_Consumer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/concurrent/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/JavaSE/Java_List.md" beforeDir="false" afterPath="$PROJECT_DIR$/repository/JavaSE/Java_List.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/JavaSE/Java_Map.md" beforeDir="false" afterPath="$PROJECT_DIR$/repository/JavaSE/Java_Map.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/JavaSE/Java_reflection.md" beforeDir="false" afterPath="$PROJECT_DIR$/repository/JavaSE/Java_reflection.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repository/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/repository/SUMMARY.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,16 +20,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repository/SUMMARY.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state relative-caret-position="60">
+              <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/repository/concurrent/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -49,21 +65,23 @@
         <option value="$PROJECT_DIR$/repository/MVC/MVC_MVP_MVVM.md" />
         <option value="$PROJECT_DIR$/repository/MVC/2018-05-24-基于开源框架搭建自己的知识体系.markdown" />
         <option value="$PROJECT_DIR$/repository/MVC/open_source_framework.md" />
-        <option value="$PROJECT_DIR$/repository/JavaSE/Java_List.md" />
-        <option value="$PROJECT_DIR$/repository/JavaSE/Java_reflection.md" />
         <option value="$PROJECT_DIR$/repository/JavaEE/Java_IO.md" />
         <option value="$PROJECT_DIR$/repository/JavaDesign/CommonDesign.md" />
         <option value="$PROJECT_DIR$/repository/end/README.md" />
         <option value="$PROJECT_DIR$/repository/Algorithm/sort.md" />
-        <option value="$PROJECT_DIR$/repository/JavaSE/Java_references.md" />
         <option value="$PROJECT_DIR$/repository/git/git_cmd.md" />
         <option value="$PROJECT_DIR$/repository/git/README.md" />
         <option value="$PROJECT_DIR$/repository/Git/git_page.md" />
+        <option value="$PROJECT_DIR$/repository/JavaSE/Java_List.md" />
+        <option value="$PROJECT_DIR$/repository/JavaSE/Java_Map.md" />
+        <option value="$PROJECT_DIR$/repository/JavaSE/Java_references.md" />
+        <option value="$PROJECT_DIR$/repository/JavaSE/Java_reflection.md" />
+        <option value="$PROJECT_DIR$/repository/concurrent/README.md" />
         <option value="$PROJECT_DIR$/repository/SUMMARY.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -72,6 +90,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -79,43 +99,32 @@
               <item name="gitbook-java" type="b2602c69:ProjectViewProjectNode" />
               <item name="gitbook-java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="gitbook-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-java" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-java" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-              <item name="MVC" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/repository/git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/repository/concurrent" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="settings.editor.splitter.proportion" value="0.26367188" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/repository/Jvm" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/repository/concurrent" />
       <recent name="$PROJECT_DIR$/repository/git" />
       <recent name="$PROJECT_DIR$/repository/JavaSE" />
       <recent name="$PROJECT_DIR$/repository/Algorithm" />
       <recent name="$PROJECT_DIR$/repository" />
-      <recent name="$PROJECT_DIR$/repository/JavaEE" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/repository/concurrent" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/repository/Jvm" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -191,7 +200,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
@@ -212,9 +221,7 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/repository/publish/companyserver.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/publish/companyserver.md" />
     <entry file="file://$PROJECT_DIR$/repository/JavaDesign/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -243,16 +250,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/JavaSE/Java_Map.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/JavaSE/Java_reflection.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/repository/Jvm/jit.md">
@@ -304,13 +305,6 @@
         <state relative-caret-position="-1303" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/JavaSE/Java_references.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repository/Git/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -324,9 +318,6 @@
           <caret column="2" selection-start-column="2" selection-end-column="11" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/JavaSE/Java_List.md">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/repository/MVC/MVC_MVP_MVVM.md">
       <provider selected="true" editor-type-id="text-editor">
@@ -356,13 +347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/JavaEE/Java_IO.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repository/book.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -370,10 +354,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/repository/JavaSE/Java_List.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/JavaSE/Java_Map.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/JavaSE/Java_references.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/JavaSE/Java_reflection.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/JavaSE/annotation.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/JavaEE/Java_IO.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/repository/SUMMARY.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        <state relative-caret-position="60">
+          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/concurrent/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>

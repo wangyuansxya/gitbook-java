@@ -1,0 +1,779 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Java注解 · Java知识点总结</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../JavaEE/" />
+    
+    
+    <link rel="prev" href="Java_reflection.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://wangyuansxya.github.io/" target="_blank" class="custom-link">YUAN</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JavaSE
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Java_List.html">
+            
+                <a href="Java_List.html">
+            
+                    
+                    Java List详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="Java_Map.html">
+            
+                <a href="Java_Map.html">
+            
+                    
+                    Java Map详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Java_references.html">
+            
+                <a href="Java_references.html">
+            
+                    
+                    Java引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="Java_reflection.html">
+            
+                <a href="Java_reflection.html">
+            
+                    
+                    Java反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="annotation.html">
+            
+                <a href="annotation.html">
+            
+                    
+                    Java注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../JavaEE/">
+            
+                <a href="../JavaEE/">
+            
+                    
+                    JavaEE
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../JavaEE/Java_IO.html">
+            
+                <a href="../JavaEE/Java_IO.html">
+            
+                    
+                    Java IO流详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../concurrent/">
+            
+                <a href="../concurrent/">
+            
+                    
+                    Java concurrent包解析(多线程通信)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../concurrent/Producer_Consumer.html">
+            
+                <a href="../concurrent/Producer_Consumer.html">
+            
+                    
+                    Java通过生产者和消费者思想实现线程通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../concurrent/Executer.html">
+            
+                <a href="../concurrent/Executer.html">
+            
+                    
+                    Java的线程池框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../concurrent/AtomicInteger.html">
+            
+                <a href="../concurrent/AtomicInteger.html">
+            
+                    
+                    AtomicInteger类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Jvm/">
+            
+                <a href="../Jvm/">
+            
+                    
+                    Java虚拟机
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Jvm/jit.html">
+            
+                <a href="../Jvm/jit.html">
+            
+                    
+                    JIT编译器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Jvm/garbage_collection_mechanism.html">
+            
+                <a href="../Jvm/garbage_collection_mechanism.html">
+            
+                    
+                    垃圾回收机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../JavaDesign/">
+            
+                <a href="../JavaDesign/">
+            
+                    
+                    设计模式(Java语言描述)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../JavaDesign/SingleTon.html">
+            
+                <a href="../JavaDesign/SingleTon.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../JavaDesign/CommonDesign.html">
+            
+                <a href="../JavaDesign/CommonDesign.html">
+            
+                    
+                    常用设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../MVC/">
+            
+                <a href="../MVC/">
+            
+                    
+                    MVC MVP MVVM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../MVC/MVC_MVP_MVVM.html">
+            
+                <a href="../MVC/MVC_MVP_MVVM.html">
+            
+                    
+                    MVC，MVP和MVVM的区别和联系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../MVC/open_source_framework.html">
+            
+                <a href="../MVC/open_source_framework.html">
+            
+                    
+                    常用开源框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Git/">
+            
+                <a href="../Git/">
+            
+                    
+                    git使用指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Git/git_cmd.html">
+            
+                <a href="../Git/git_cmd.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Git/git_page.html">
+            
+                <a href="../Git/git_page.html">
+            
+                    
+                    git Page使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Algorithm/">
+            
+                <a href="../Algorithm/">
+            
+                    
+                    算法总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Algorithm/sort.html">
+            
+                <a href="../Algorithm/sort.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../end/">
+            
+                <a href="../end/">
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Java注解</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>1&#xFF0C;&#x6E90;&#x7801;&#x6CE8;&#x89E3;&#x4EC5;&#x4EC5;&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x5C42;&#x9762;&#x4E0A;&#x6709;&#x6548;</p>
+<p>2&#xFF0C;&#x5728;&#x88AB;&#x7F16;&#x8BD1;&#x6210;&#x5B57;&#x8282;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5DF2;&#x7ECF;&#x88AB;&#x5B8C;&#x5168;&#x64E6;&#x9664;&#x4E86;</p>
+<p>3&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x8D77;&#x5230;&#x6807;&#x8BB0;&#x4F5C;&#x7528;&#xFF0C;&#x4FDD;&#x8BC1;&#x4EE3;&#x7801;&#x7684;&#x5065;&#x58EE;&#x6027;</p>
+<p><strong>&#x4E00;&#xFF0C;&#x6CE8;&#x89E3;&#x7684;&#x5B9A;&#x4E49;</strong></p>
+<p>@Interface&#x58F0;&#x660E;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Java&#x63A5;&#x53E3;&#xFF0C;&#x4E0E;&#x5176;&#x4ED6;&#x63A5;&#x53E3;&#x4E00;&#x6837;&#xFF0C;&#x6CE8;&#x89E3;&#x4E5F;&#x5C06;&#x4F1A;&#x7F16;&#x8BD1;&#x6210;.class&#x6587;&#x4EF6;&#xFF0C;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x58F0;&#x660E;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x65B9;&#x6CD5;&#x58F0;&#x660E;&#xFF0C;&#x6CE8;&#x89E3;&#x7684;&#x65B9;&#x6CD5;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x6CA1;&#x6709;throws&#x8BED;&#x53E5;&#xFF0C;&#x4E5F;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x6CDB;&#x578B;</p>
+<p><strong>&#x4E8C;&#xFF0C;&#x5143;&#x6CE8;&#x89E3;</strong></p>
+<p>&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5143;&#x6CE8;&#x89E3;&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x548C;&#x5B9E;&#x73B0;&#x6CE8;&#x89E3;&#x7684;&#x6CE8;&#x89E3;&#xFF0C;&#x5171;&#x4E94;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>@Target &#x53D6;&#x503C;&#x662F;&#x4E00;&#x4E2A;ElementType&#x7C7B;&#x578B;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x6CE8;&#x89E3;&#x4F7F;&#x7528;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x5171;10&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x578B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x5143;&#x7D20;&#x7C7B;&#x578B;</th>
+<th>&#x9002;&#x7528;&#x4E8E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>ANNOTATIONT_YPRE | &#x6CE8;&#x89E3;&#x7C7B;&#x578B;&#x58F0;&#x660E;
+CONSTRUCTOR |&#x6784;&#x9020;&#x51FD;&#x6570;
+FIELD |  &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;
+LOCAL_VARLABLE | &#x5C40;&#x90E8;&#x53D8;&#x91CF;
+METHOD | &#x65B9;&#x6CD5;
+PACKAGE | &#x5305;
+PARAMETER | &#x53C2;&#x6570;
+TYPE | &#x7C7B;&#xFF08;&#x5305;&#x542B;enum&#xFF09;&#x548C;&#x63A5;&#x53E3;&#xFF08;&#x5305;&#x542B;&#x6CE8;&#x89E3;&#x7C7B;&#x578B;&#xFF09;
+TYPE_PARAMETER | &#x7C7B;&#x578B;&#x53C2;&#x6570;
+TYPE_USE | &#x7C7B;&#x578B;&#x7528;&#x9014;</p>
+<p>&#x540C;&#x65F6;&#x652F;&#x6301;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x6CE8;&#x89E3;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;</p>
+<pre><code>@Target({ElementType.TYPE, ElementType.PACKAGE})
+public @interface Media{
+}
+</code></pre><p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6CE8;&#x89E3;&#x6CA1;&#x6709;&#x6307;&#x5B9A;@Target&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x9664;&#x4E86;TYPE_USE&#x548C;TYPE_PARAMETER&#x7684;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x4E2D;</p>
+<ul>
+<li>@Retention &#x7528;&#x6765;&#x6307;&#x660E;&#x6CE8;&#x89E3;&#x7684;&#x8BBF;&#x95EE;&#x8303;&#x56F4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4EC0;&#x4E48;&#x7EA7;&#x522B;&#x4FDD;&#x7559;&#x6CE8;&#x89E3;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x6CE8;&#x89E3;&#x8303;&#x56F4;</th>
+<th>&#x6CE8;&#x89E3;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6E90;&#x7801;&#x7EA7;&#x6CE8;&#x89E3;</td>
+<td>@Retention(RetentionPolicy.SOURCE)</td>
+<td>&#x6CE8;&#x89E3;&#x4FE1;&#x606F;&#x53EA;&#x4FDD;&#x7559;&#x5230;Java&#x6E90;&#x7801;&#x91CC;</td>
+</tr>
+<tr>
+<td>&#x7F16;&#x8BD1;&#x65F6;&#x6CE8;&#x89E3;</td>
+<td>@Retention(RetentionPolicy.CLASS)</td>
+<td>&#x6CE8;&#x89E3;&#x4FE1;&#x606F;&#x4F1A;&#x4FDD;&#x7559;&#x5230;Java&#x6E90;&#x7801;&#x7684;.class&#x6587;&#x4EF6;&#x91CC;</td>
+</tr>
+<tr>
+<td>&#x8FD0;&#x884C;&#x65F6;&#x6CE8;&#x89E3;</td>
+<td>@Retention(RetentionPolicy.RUNTME)</td>
+<td>Java&#x865A;&#x62DF;&#x673A;&#x8FD0;&#x884C;&#x65F6;&#x4E5F;&#x4FDD;&#x7559;&#x6CE8;&#x89E3;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x8BFB;&#x53D6;&#x6CE8;&#x89E3;&#x7684;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x672A;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x65F6;ClASS&#x7C7B;&#x578B;</p>
+<ul>
+<li>@Documented &#x8868;&#x793A;&#x88AB;&#x4FEE;&#x9970;&#x7684;&#x6CE8;&#x89E3;&#x5E94;&#x8BE5;&#x5305;&#x542B;&#x5728;&#x88AB;&#x6CE8;&#x89E3;&#x9879;&#x7684;&#x6587;&#x6863;&#x91CC;</li>
+<li>@Inherited &#x8868;&#x793A;&#x6CE8;&#x89E3;&#x53EF;&#x4EE5;&#x88AB;&#x5B50;&#x7C7B;&#x7EE7;&#x627F;<ul>
+<li>@Inherited &#x5143;&#x6CE8;&#x89E3;&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x8BB0;&#x6CE8;&#x89E3;&#xFF0C;@Inherited&#x9610;&#x8FF0;&#x4E86;&#x67D0;&#x4E2A;&#x88AB;&#x6807;&#x6CE8;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x88AB;&#x7EE7;&#x627F;&#x7684;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x4E86;@Inherited&#x4FEE;&#x9970;&#x7684;annotation&#x7C7B;&#x578B;&#x88AB;&#x7528;&#x4E8E;&#x4E00;&#x4E2A;class&#xFF0C;&#x5219;&#x8FD9;&#x4E2A;annotation&#x5C06;&#x88AB;&#x7528;&#x4E8E;&#x8BE5;class&#x7684;&#x5B50;&#x7C7B;&#x3002; </li>
+</ul>
+</li>
+<li>@Repeatable &#x8868;&#x793A;&#x6CE8;&#x89E3;&#x53EF;&#x4EE5;&#x5728;&#x540C;&#x4E00;&#x9879;&#x76EE;&#x4E0A;&#x5E94;&#x8BE5;&#x591A;&#x6B21;&#xFF0C;&#x8FD9;&#x4E2A;&#x6CE8;&#x89E3;&#x65F6;&#x5728;Java 8&#x5F15;&#x5165;&#x7684;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x4E8B;&#x5728;Java 5&#x4E0A;&#x5F15;&#x5165;</li>
+</ul>
+<p><strong>&#x4E09;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x6807;&#x51C6;&#x6CE8;&#x89E3;</strong></p>
+<p>1&#xFF0C;Override</p>
+<ul>
+<li>java.lang.Override&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x8BB0;&#x7C7B;&#x578B;&#x6CE8;&#x89E3;&#xFF0C;&#x5B83;&#x88AB;&#x7528;&#x4F5C;&#x6807;&#x6CE8;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x5B83;&#x8BF4;&#x660E;&#x4E86;&#x88AB;&#x6807;&#x6CE8;&#x7684;&#x65B9;&#x6CD5;&#x91CD;&#x8F7D;&#x4E86;&#x7236;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8D77;&#x5230;&#x4E86;&#x65AD;&#x8A00;&#x7684;&#x4F5C;&#x7528;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x79CD;&#x6CE8;&#x89E3;&#x5728;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x8986;&#x76D6;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x7684;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;java&#x7F16;&#x8BD1;&#x5668;&#x5C06;&#x4EE5;&#x4E00;&#x4E2A;&#x7F16;&#x8BD1;&#x9519;&#x8BEF;&#x6765;&#x8B66;&#x793A;&#x3002;</li>
+</ul>
+<p>2&#xFF0C;Deprecated</p>
+<ul>
+<li>Deprecated&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x6807;&#x8BB0;&#x7C7B;&#x578B;&#x6CE8;&#x89E3;&#x3002;&#x5F53;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x7C7B;&#x578B;&#x6210;&#x5458;&#x4F7F;&#x7528;@Deprecated&#x4FEE;&#x9970;&#x7684;&#x8BDD;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x5C06;&#x4E0D;&#x9F13;&#x52B1;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x88AB;&#x6807;&#x6CE8;&#x7684;&#x7A0B;&#x5E8F;&#x5143;&#x7D20;&#x3002;</li>
+<li>&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x4FEE;&#x9970;&#x5177;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x201C;&#x5EF6;&#x7EED;&#x6027;&#x201D;&#xFF1A;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x901A;&#x8FC7;&#x7EE7;&#x627F;&#x6216;&#x8005;&#x8986;&#x76D6;&#x7684;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x4E2A;&#x8FC7;&#x65F6;&#x7684;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x6210;&#x5458;&#xFF0C;</li>
+<li>&#x867D;&#x7136;&#x7EE7;&#x627F;&#x6216;&#x8005;&#x8986;&#x76D6;&#x540E;&#x7684;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x6210;&#x5458;&#x5E76;&#x4E0D;&#x662F;&#x88AB;&#x58F0;&#x660E;&#x4E3A;@Deprecated&#xFF0C;&#x4F46;&#x7F16;&#x8BD1;&#x5668;&#x4ECD;&#x7136;&#x8981;&#x62A5;&#x8B66;&#x3002;</li>
+</ul>
+<p>3&#xFF0C;SuppressWarnings</p>
+<ul>
+<li>SuppressWarning&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x8BB0;&#x7C7B;&#x578B;&#x6CE8;&#x89E3;&#x3002;</li>
+<li>&#x5B83;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A;String[]&#x7684;&#x6210;&#x5458;&#xFF0C;&#x8FD9;&#x4E2A;&#x6210;&#x5458;&#x7684;&#x503C;&#x4E3A;&#x88AB;&#x7981;&#x6B62;&#x7684;&#x8B66;&#x544A;&#x540D;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;javac&#x7F16;&#x8BD1;&#x5668;&#x6765;&#x8BB2;&#xFF0C;&#x88AB;-Xlint&#x9009;&#x9879;&#x6709;&#x6548;&#x7684;&#x8B66;&#x544A;&#x540D;&#x4E5F;&#x540C;&#x6837;&#x5BF9;@SuppressWarings&#x6709;&#x6548;&#xFF0C;&#x540C;&#x65F6;&#x7F16;&#x8BD1;&#x5668;&#x5FFD;&#x7565;&#x6389;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x7684;&#x8B66;&#x544A;&#x540D;&#x3002;</li>
+<li>@SuppressWarnings(&quot;unchecked&quot;)</li>
+</ul>
+<p><strong>&#x56DB;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x6CE8;&#x89E3;</strong></p>
+<pre><code>@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+public @interface Friut {
+    enum Color { BLUE, RED, GREEN};
+    /**
+     * &#x6C34;&#x679C;&#x989C;&#x8272;
+     * @return
+     */
+    Color fruitColor() default Color.RED;
+}
+</code></pre><p><strong>&#x4E94;&#xFF0C;&#x8FD0;&#x884C;&#x65F6;&#x6CE8;&#x89E3;</strong></p>
+<ul>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x8FD0;&#x884C;&#x65F6;&#x6CE8;&#x89E3;&#xFF08;&#x7F16;&#x8BD1;&#x65F6;&#x6CE8;&#x89E3;&#x548C;&#x8FD0;&#x884C;&#x65F6;&#x6CE8;&#x89E3;&#x6709;&#x70B9;&#x50CF;Android&#x865A;&#x62DF;&#x673A;art&#x548C;Dalvik&#x7684;&#x533A;&#x522B;&#xFF0C;&#x9884;&#x52A0;&#x8F7D;&#x548C;&#x8FD0;&#x884C;&#x65F6;&#x52A0;&#x8F7D;&#xFF09;</li>
+<li>&#x4E00;&#x822C;&#x548C;&#x53CD;&#x5C04;&#x914D;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x76F8;&#x6BD4;&#x4E8E;&#x7F16;&#x8BD1;&#x65F6;&#x6CE8;&#x89E3;&#x6027;&#x80FD;&#x6BD4;&#x8F83;&#x4F4E;&#xFF0C;&#x4F46;&#x7075;&#x6D3B;&#x6027;&#x597D;&#xFF0C;&#x5B9E;&#x73B0;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x7B80;&#x5355;</li>
+</ul>
+<p><strong>&#x516D;&#xFF0C;&#x7F16;&#x8BD1;&#x65F6;&#x6CE8;&#x89E3;</strong></p>
+<p>&#x80FD;&#x591F;&#x81EA;&#x52A8;&#x5904;&#x7406;Java&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x80FD;&#x591F;&#x751F;&#x6210;&#x66F4;&#x591A;&#x6E90;&#x7801;&#xFF0C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x811A;&#x672C;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x53EF;&#x80FD;&#x60F3;&#x751F;&#x6210;&#x7684;&#x4E1C;&#x897F;
+Java&#x7F16;&#x8BD1;&#x5668;&#x96C6;&#x6210;&#x4E86;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#xFF0C;&#x901A;&#x8FC7;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x95F4;&#x8C03;&#x7528;javac -processor&#x547D;&#x4EE4;&#x8C03;&#x8D77;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x5B83;&#x80FD;&#x591F;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x7F16;&#x8BD1;&#x65F6;&#x6CE8;&#x89E3;&#x529F;&#x80FD;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x51FD;&#x6570;&#x5E93;&#x7684;&#x6027;&#x80FD;</p>
+<p>1&#xFF0C;&#x5B9A;&#x4E49;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;
+&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;&#x53EA;&#x80FD;&#x4EA7;&#x751F;&#x65B0;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#x5DF2;&#x7ECF;&#x6709;&#x7684;&#x6587;&#x4EF6;</p>
+<ul>
+<li>&#x7EE7;&#x627F;AbstractProcessor &#x5E76;&#x5B9E;&#x73B0;progress&#x65B9;&#x6CD5;&#xFF0C;&#x540C;&#x65F6;&#x8981;&#x6307;&#x5B9A;&#x8FD9;&#x4E2A;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;&#x80FD;&#x591F;&#x5904;&#x7406;&#x7684;&#x6CE8;&#x89E3;&#x7C7B;&#x578B;&#x4EE5;&#x53CA;&#x652F;&#x6301;&#x7684;Java&#x7248;&#x672C;</li>
+</ul>
+<p>2&#xFF0C;&#x6CE8;&#x518C;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;</p>
+<ul>
+<li>&#x5B9A;&#x4E49;&#x597D;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;&#x4E4B;&#x540E;&#xFF0C;&#x4E3A;&#x4E86;&#x8BA9;javac -processor&#x80FD;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x6CE8;&#x518C;</li>
+<li>&#x5C06;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;&#x6253;&#x5305;&#x5230;&#x4E00;&#x4E2A;Jar&#x5305;&#x4E2D;&#xFF0C;&#x540C;&#x65F6;&#x5728;jar&#x5305;&#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;javax.annotation.processing,Processor&#x7684;&#x6587;&#x4EF6;&#x6765;&#x6307;&#x660E;jar&#x6587;&#x4EF6;&#x4E2D;&#x6709;&#x54EA;&#x4E9B;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;</li>
+<li>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x6700;&#x7EC8;&#x7684;&#x8DEF;&#x5F84;&#x4F4D;&#x4E8E;jar&#x6587;&#x4EF6;&#x6839;&#x76EE;&#x5F55;&#x4E2D;&#x7684;META_INF/services&#x4E0B;</li>
+<li>&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;&#x7684;&#x5168;&#x8DEF;&#x5F84;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#xFF0C;&#x4EE5;&#x6362;&#x884C;&#x8FDB;&#x884C;&#x5206;&#x5272;</li>
+<li>&#x8BED;&#x53E5;&#x5982;&#x4E0B;&#xFF1A;com.annotation.processor.AnnotationProcessor</li>
+</ul>
+<p>&#x624B;&#x52A8;&#x6267;&#x884C;&#x4E0A;&#x9762;&#x7684;&#x6CE8;&#x518C;&#x6D41;&#x7A0B;&#x662F;&#x5F88;&#x7E41;&#x7410;&#x7684;&#xFF0C;Google&#x5F00;&#x6E90;&#x7684;Autoservices&#x5E93;&#xFF0C;&#x5F15;&#x5165;&#x8FD9;&#x4E2A;&#x5E93;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;@AutoService(Processor.class)&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</p>
+<p><strong>&#x4E03;&#xFF0C;Android&#x7684;apt&#x63D2;&#x4EF6;</strong></p>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;&#x53EA;&#x662F;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x95F4;&#x6709;&#x6548;&#xFF0C;&#x5230;&#x5E94;&#x7528;&#x8FD0;&#x884C;&#x65F6;&#x4E0D;&#x4F1A;&#x7528;&#x5230;&#xFF0C;&#x56E0;&#x6B64;&#x5728;gradle&#x4E2D;&#x5F15;&#x5165;&#x4F9D;&#x8D56;&#x5E94;&#x8BE5;&#x65F6;provided&#x800C;&#x4E0D;&#x662F;compile&#xFF0C;&#x8BED;&#x53E5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>provided &#x201C;&#x201D;</li>
+</ul>
+<p>&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Android-apt&#x63D2;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5B83;&#x65F6;&#x4E00;&#x4E2A;Android studio&#x5F15;&#x5165;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;&#x7684;&#x4E00;&#x4E2A;&#x8F85;&#x52A9;&#x63D2;&#x4EF6;</p>
+<p>&#x53EA;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x95F4;&#x5F15;&#x5165;&#x6CE8;&#x89E3;&#x5904;&#x7406;&#x5668;&#x6240;&#x5728;&#x7684;&#x7684;&#x51FD;&#x6570;&#x5E93;&#x4F5C;&#x4E3A;&#x4F9D;&#x8D56;&#xFF0C;&#x4E0D;&#x4F1A;&#x5927;&#x5305;&#x5230;&#x6700;&#x7EC8;&#x751F;&#x6210;&#x7684;Apk&#x4E2D;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Java_reflection.html" class="navigation navigation-prev " aria-label="Previous page: Java反射">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../JavaEE/" class="navigation navigation-next " aria-label="Next page: JavaEE">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Java注解","level":"1.2.5","depth":2,"next":{"title":"JavaEE","level":"1.3","depth":1,"path":"JavaEE/README.md","ref":"JavaEE/README.md","articles":[{"title":"Java IO流详解","level":"1.3.1","depth":2,"path":"JavaEE/Java_IO.md","ref":"JavaEE/Java_IO.md","articles":[]}]},"previous":{"title":"Java反射","level":"1.2.4","depth":2,"path":"JavaSE/Java_reflection.md","ref":"JavaSE/Java_reflection.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"wiznote","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"serif","size":2},"highlight":{},"ga":{"token":"UA-39088953-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Java","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Java知识点总结","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"YUAN":"http://wangyuansxya.github.io/"},"tail":{"Java知识点总结":"http://wangyuansxya.github.io/gitbook-java/"},"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true,"weibo":true,"qq":true,"qrcode":true}},"introduction":{"path":"README.md","title":"Java知识点总结"},"gitbook":"*","description":"Java知识点总结"},"file":{"path":"JavaSE/annotation.md","mtime":"2020-02-25T08:25:00.430Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-25T08:35:36.934Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

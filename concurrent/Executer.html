@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>git使用指南 · Java知识点总结</title>
+        <title>Java的线程池框架 · Java知识点总结</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="git_cmd.html" />
+    <link rel="next" href="AtomicInteger.html" />
     
     
-    <link rel="prev" href="../MVC/open_source_framework.html" />
+    <link rel="prev" href="Producer_Consumer.html" />
     
 
     </head>
@@ -227,9 +227,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../concurrent/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../concurrent/">
+                <a href="./">
             
                     
                     Java concurrent包解析(多线程通信)
@@ -241,9 +241,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../concurrent/Producer_Consumer.html">
+        <li class="chapter " data-level="1.4.1" data-path="Producer_Consumer.html">
             
-                <a href="../concurrent/Producer_Consumer.html">
+                <a href="Producer_Consumer.html">
             
                     
                     Java通过生产者和消费者思想实现线程通信
@@ -254,9 +254,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../concurrent/Executer.html">
+        <li class="chapter active" data-level="1.4.2" data-path="Executer.html">
             
-                <a href="../concurrent/Executer.html">
+                <a href="Executer.html">
             
                     
                     Java的线程池框架
@@ -267,9 +267,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../concurrent/AtomicInteger.html">
+        <li class="chapter " data-level="1.4.3" data-path="AtomicInteger.html">
             
-                <a href="../concurrent/AtomicInteger.html">
+                <a href="AtomicInteger.html">
             
                     
                     AtomicInteger类
@@ -420,9 +420,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="./">
+        <li class="chapter " data-level="1.8" data-path="../Git/">
             
-                <a href="./">
+                <a href="../Git/">
             
                     
                     git使用指南
@@ -434,9 +434,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="git_cmd.html">
+        <li class="chapter " data-level="1.8.1" data-path="../Git/git_cmd.html">
             
-                <a href="git_cmd.html">
+                <a href="../Git/git_cmd.html">
             
                     
                     git常用命令
@@ -447,9 +447,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="git_page.html">
+        <li class="chapter " data-level="1.8.2" data-path="../Git/git_page.html">
             
-                <a href="git_page.html">
+                <a href="../Git/git_page.html">
             
                     
                     git Page使用
@@ -540,7 +540,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >git使用指南</a>
+        <a href=".." >Java的线程池框架</a>
     </h1>
 </div>
 
@@ -555,7 +555,64 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="git&#x7684;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x547D;&#x4EE4;">git&#x7684;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x547D;&#x4EE4;</h1>
+                                <p>Java&#x7EBF;&#x7A0B;&#x6C60; Executer Framwork**</p>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x521B;&#x5EFA;&#x548C;&#x9500;&#x6BC1;&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x5B58;&#x5728;&#x5F00;&#x9500;&#x7684;&#xFF08;&#x4F8B;&#x5982;&#x7EBF;&#x7A0B;&#xFF09;&#xFF0C;&#x8FD9;&#x4E9B;&#x4F1A;&#x5F71;&#x54CD;&#x6211;&#x4EEC;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x4F7F;&#x7528;Java Executer&#x6846;&#x67B6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7EBF;&#x7A0B;&#x6C60;&#x89E3;&#x51B3;&#x8FD9;&#x4E00;&#x95EE;&#x9898;&#xFF0C;Executer&#x6846;&#x67B6;&#x63D0;&#x4F9B;&#x4E86;&#x5982;&#x4E0B;&#x80FD;&#x529B;</p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#xFF0C;&#x540C;&#x65F6;&#x901A;&#x8FC7;&#x961F;&#x5217;&#x6765;&#x63A7;&#x5236;&#x80FD;&#x591F;&#x5728;&#x8FD9;&#x4E9B;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x7684;&#x4E2A;&#x6570;</li>
+<li>&#x68C0;&#x6D4B;&#x5BFC;&#x81F4;&#x7EBF;&#x7A0B;&#x610F;&#x5916;&#x7EC8;&#x6B62;&#x7684;&#x9519;&#x8BEF;</li>
+<li>&#x7B49;&#x5F85;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x5E76;&#x83B7;&#x53D6;&#x6267;&#x884C;&#x7ED3;&#x679C;</li>
+<li>&#x6279;&#x91CF;&#x6267;&#x884C;&#x7EBF;&#x7A0B;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x56FA;&#x5B9A;&#x7684;&#x987A;&#x5E8F;&#x83B7;&#x53D6;&#x6267;&#x884C;&#x7ED3;&#x679C;</li>
+<li>&#x5728;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x542F;&#x52A8;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#xFF0C;&#x4ECE;&#x800C;&#x4FDD;&#x8BC1;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#x5F88;&#x5FEB;&#x53CD;&#x9988;&#x7ED9;&#x7528;&#x6237;</li>
+</ul>
+<p>Executer&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x5206;&#x79BB;&#x4EFB;&#x52A1;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x6267;&#x884C;&#xFF0C;&#x5B9E;&#x73B0;&#x4E0A;&#x9762;&#x7684;&#x529F;&#x80FD;&#x70B9;</p>
+<pre><code>public interface Executor {
+    void execute(Runnable command);
+}
+</code></pre><p>&#x5F53;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x81EA;&#x5DF1;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x65F6;&#x5019;&#x3002;&#x53EA;&#x6709;&#x5B9E;&#x73B0;Executor&#x63A5;&#x53E3;&#xFF0C;&#x5E76;&#x5B9E;&#x73B0;execute&#x65B9;&#x6CD5;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;&#x5B9E;&#x73B0;&#x5C31;&#x662F;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x4EFB;&#x52A1;</p>
+<pre><code>public class MyExecutor implements Executor {
+    @Override
+    public void execute(Runnable command) {
+        new Thread(command).start();
+    }
+}
+</code></pre><p>&#x5F53;&#x7136;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x7684;Executor&#x5F88;&#x5C11;&#x662F;&#x8FD9;&#x4E48;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x589E;&#x52A0;&#x7C7B;&#x4F3C;&#x961F;&#x5217;&#xFF0C;&#x4EFB;&#x52A1;&#x4F18;&#x5148;&#x7EA7;&#x7B49;&#x529F;&#x80FD;&#xFF0C;&#x6700;&#x7EC8;&#x5B9E;&#x73B0;&#x7EBF;&#x7A0B;&#x6C60;</p>
+<blockquote>
+<p>&#x7EBF;&#x7A0B;&#x6C60;&#x662F;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x548C;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x8FD9;&#x4FE9;&#x8005;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x5B9E;&#x73B0;&#x751F;&#x4EA7;&#x8005;&#x548C;&#x6D88;&#x8D39;&#x8005;&#x6A21;&#x5F0F;</p>
+</blockquote>
+<p>Executor&#x5DF2;&#x7ECF;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x51E0;&#x4E2A;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x5B9E;&#x73B0;&#xFF0C;&#x5982;&#x4E0B;</p>
+<ul>
+<li><p>&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x901A;&#x8FC7;Executors.newFixedThreadPool(n)&#xFF0C;n&#x8868;&#x793A;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x7EBF;&#x7A0B;&#x7684;&#x5927;&#x5C0F;</p>
+<pre><code>   public static ExecutorService newFixedThreadPool(int nThreads) {
+      return new ThreadPoolExecutor(nThreads, nThreads,
+                                    0L, TimeUnit.MILLISECONDS,
+                                    new LinkedBlockingQueue&lt;Runnable&gt;());
+  }
+</code></pre></li>
+<li><p>&#x53EF;&#x53D8;&#x5927;&#x5C0F;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x901A;&#x8FC7;Executors.newCachedThreadPool()&#x521B;&#x5EFA;</p>
+</li>
+</ul>
+<blockquote>
+<p>&#x5F53;&#x6709;&#x65B0;&#x7684;&#x4EFB;&#x52A1;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7EBF;&#x7A0B;&#x4F1A;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x7EBF;&#x7A0B;&#x6765;&#x5904;&#x7406;&#x5B83; <br>
+&#x7A7A;&#x95F2;&#x7684;&#x7EBF;&#x7A0B;&#x4F1A;&#x7B49;&#x5F85;60s&#x6765;&#x6267;&#x884C;&#x65B0;&#x4EFB;&#x52A1;&#xFF0C;&#x5F53;&#x6CA1;&#x6709;&#x53EF;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x9500;&#x6BC1; <br>
+&#x56E0;&#x6B64;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x5927;&#x5C0F;&#x4F1A;&#x6839;&#x636E;&#x961F;&#x5217;&#x7684;&#x5927;&#x5C0F;&#x53D8;&#x5316;&#x800C;&#x53D8;&#x5316;</p>
+</blockquote>
+<ul>
+<li>&#x5355;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x901A;&#x8FC7;Executors.newSingleThreadExecutor()&#x521B;&#x5EFA;&#xFF0C;&#x8FD9;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x6C38;&#x8FDC;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E32;&#x884C;&#x7684;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x5C31;&#x662F;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x662F;&#x57FA;&#x4E8E;ThreadPoolExecutor&#x7C7B;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x6784;&#x5EFA;&#x7684;&#xFF0C;&#x800C;&#x901A;&#x8FC7;ThreadPoolExecutor&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x4E00;&#x4E9B;&#x884C;&#x4E3A;&#x3002;</p>
+<pre><code>public ThreadPoolExecutor(int corePoolSize,
+                              int maximumPoolSize,
+                              long keepAliveTime,
+                              TimeUnit unit,
+                              BlockingQueue&lt;Runnable&gt; workQueue)
+</code></pre><ul>
+<li>corePoolSize&#xFF1A;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x6570;&#x3002;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x4F1A;&#x4E00;&#x76F4;&#x5B58;&#x5728;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#xFF0C;&#x5373;&#x4F7F;&#x5F53;&#x524D;&#x6CA1;&#x6709;&#x4EFB;&#x52A1;&#x9700;&#x8981;&#x5904;&#x7406;&#xFF0C;&#x5F53;&#x7EBF;&#x7A0B;&#x6570;&#x5C0F;&#x4E8E;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x6570;&#xFF0C;&#x5373;&#x4F7F;&#x5F53;&#x524D;&#x6709;&#x7A7A;&#x95F2;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x7EBF;&#x7A0B;&#x6C60;&#x4E5F;&#x4F1A;&#x4F18;&#x5148;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x7EBF;&#x7A0B;&#x6765;&#x6267;&#x884C;&#x65B0;&#x4EFB;&#x52A1;&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x597D;&#x5904;&#x662F;&#x65E0;&#x9700;&#x7F13;&#x5B58;</li>
+<li>maximumPoolSize&#xFF1A;&#x6700;&#x5927;&#x7EBF;&#x7A0B;&#x6570;&#x3002;&#x5F53;&#x7EBF;&#x7A0B;&#x6570;&#x5927;&#x4E8E;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x6570;&#xFF0C;&#x800C;&#x4E14;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x5DF2;&#x7ECF;&#x6EE1;&#x4E86;&#xFF0C;&#x8FD9;&#x662F;&#x7EBF;&#x7A0B;&#x6C60;&#x4F1A;&#x521B;&#x65B0;&#x65B0;&#x7684;&#x7EBF;&#x7A0B;&#x6765;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF0C;&#x76F4;&#x5230;&#x7EBF;&#x7A0B;&#x6570;&#x7B49;&#x4E8E;&#x6700;&#x5927;&#x7EBF;&#x7A0B;&#x6570;&#x4E3A;&#x6B62;</li>
+<li>keepAliveTime&#xFF1A;&#x7EBF;&#x7A0B;&#x7A7A;&#x95F2;&#x5B58;&#x6D3B;&#x65F6;&#x95F4;&#x3002;&#x5F53;&#x7EBF;&#x7A0B;&#x7684;&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x8D85;&#x8FC7;keepAliveTime&#x65F6;&#x95F4;&#x65F6;&#xFF0C;&#x7EBF;&#x7A0B;&#x4F1A;&#x88AB;&#x9500;&#x6BC1;&#xFF0C;&#x77E5;&#x9053;&#x7EBF;&#x7A0B;&#x6570;&#x7B49;&#x4E8E;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x6570;</li>
+<li>unit&#xFF1A;keepAliveTime&#x7684;&#x65F6;&#x95F4;&#x5355;&#x4F4D;&#x3002;&#x53EF;&#x9009;&#x7684;&#x503C;&#x6709;TimeUnit&#x7684;&#x679A;&#x4E3E;&#x503C;</li>
+<li>workQueue &#x7EBF;&#x7A0B;&#x6C60;&#x9501;&#x4F7F;&#x7528;&#x7684;&#x4EFB;&#x52A1;&#x7F13;&#x5B58;&#x961F;&#x5217;</li>
+</ul>
+<p><a href="https://www.jianshu.com/p/42cba30e1ba6" target="_blank">Java&#x591A;&#x7EBF;&#x7A0B;&#xFF1A;&#x5F7B;&#x5E95;&#x641E;&#x61C2;&#x7EBF;&#x7A0B;&#x6C60;</a></p>
 
                                 
                                 </section>
@@ -583,12 +640,12 @@
 
             
                 
-                <a href="../MVC/open_source_framework.html" class="navigation navigation-prev " aria-label="Previous page: 常用开源框架">
+                <a href="Producer_Consumer.html" class="navigation navigation-prev " aria-label="Previous page: Java通过生产者和消费者思想实现线程通信">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="git_cmd.html" class="navigation navigation-next " aria-label="Next page: git常用命令">
+                <a href="AtomicInteger.html" class="navigation navigation-next " aria-label="Next page: AtomicInteger类">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -599,7 +656,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"git使用指南","level":"1.8","depth":1,"next":{"title":"git常用命令","level":"1.8.1","depth":2,"path":"Git/git_cmd.md","ref":"Git/git_cmd.md","articles":[]},"previous":{"title":"常用开源框架","level":"1.7.2","depth":2,"path":"MVC/open_source_framework.md","ref":"MVC/open_source_framework.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"wiznote","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"serif","size":2},"highlight":{},"ga":{"token":"UA-39088953-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Java","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Java知识点总结","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"YUAN":"http://wangyuansxya.github.io/"},"tail":{"Java知识点总结":"http://wangyuansxya.github.io/gitbook-java/"},"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true,"weibo":true,"qq":true,"qrcode":true}},"introduction":{"path":"README.md","title":"Java知识点总结"},"gitbook":"*","description":"Java知识点总结"},"file":{"path":"Git/README.md","mtime":"2020-02-25T03:20:46.078Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-25T08:35:36.934Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Java的线程池框架","level":"1.4.2","depth":2,"next":{"title":"AtomicInteger类","level":"1.4.3","depth":2,"path":"concurrent/AtomicInteger.md","ref":"concurrent/AtomicInteger.md","articles":[]},"previous":{"title":"Java通过生产者和消费者思想实现线程通信","level":"1.4.1","depth":2,"path":"concurrent/Producer_Consumer.md","ref":"concurrent/Producer_Consumer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"wiznote","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"serif","size":2},"highlight":{},"ga":{"token":"UA-39088953-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Java","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Java知识点总结","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"YUAN":"http://wangyuansxya.github.io/"},"tail":{"Java知识点总结":"http://wangyuansxya.github.io/gitbook-java/"},"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true,"weibo":true,"qq":true,"qrcode":true}},"introduction":{"path":"README.md","title":"Java知识点总结"},"gitbook":"*","description":"Java知识点总结"},"file":{"path":"concurrent/Executer.md","mtime":"2020-02-25T08:32:13.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-25T08:35:36.934Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
