@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>结束 · Java知识点总结</title>
+        <title>JIT编译器 · Java知识点总结</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="garbage_collection_mechanism.html" />
     
-    <link rel="prev" href="../Algorithm/sort.html" />
+    
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -212,9 +214,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../Jvm/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../Jvm/">
+                <a href="./">
             
                     
                     Java虚拟机
@@ -226,9 +228,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../Jvm/jit.html">
+        <li class="chapter active" data-level="1.4.1" data-path="jit.html">
             
-                <a href="../Jvm/jit.html">
+                <a href="jit.html">
             
                     
                     JIT编译器
@@ -239,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../Jvm/garbage_collection_mechanism.html">
+        <li class="chapter " data-level="1.4.2" data-path="garbage_collection_mechanism.html">
             
-                <a href="../Jvm/garbage_collection_mechanism.html">
+                <a href="garbage_collection_mechanism.html">
             
                     
                     垃圾回收机制
@@ -424,9 +426,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9" data-path="./">
+        <li class="chapter " data-level="1.9" data-path="../end/">
             
-                <a href="./">
+                <a href="../end/">
             
                     
                     结束
@@ -467,7 +469,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >结束</a>
+        <a href=".." >JIT编译器</a>
     </h1>
 </div>
 
@@ -482,8 +484,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7ED3;&#x675F;">&#x7ED3;&#x675F;</h1>
-<p>&#x8FD9;&#x662F;&#x7B14;&#x8BB0;&#x5728;&#x5E73;&#x65F6;&#x7684;&#x79EF;&#x7D2F;&#x4E0B;&#xFF0C;&#x603B;&#x7ED3;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x5982;&#x6709;&#x9519;&#x8BEF;&#xFF0C;&#x6B22;&#x8FCE;&#x6307;&#x6B63;</p>
+                                <p><strong>java&#x7684;Jit&#x7F16;&#x8BD1;&#x5668;</strong></p>
+<ol>
+<li><p>JIT &#x662F; just in time &#x7684;&#x7F29;&#x5199;, &#x4E5F;&#x5C31;&#x662F;&#x5373;&#x65F6;&#x7F16;&#x8BD1;&#x7F16;&#x8BD1;&#x5668;&#x3002;&#x4F7F;&#x7528;&#x5373;&#x65F6;&#x7F16;&#x8BD1;&#x5668;&#x6280;&#x672F;&#xFF0C;&#x80FD;&#x591F;&#x52A0;&#x901F; Java &#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x901F;&#x5EA6;&#x3002;</p>
+</li>
+<li><p>&#x901A;&#x5E38;&#x901A;&#x8FC7; javac &#x5C06;&#x7A0B;&#x5E8F;&#x6E90;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;&#xFF0C;&#x8F6C;&#x6362;&#x6210; java &#x5B57;&#x8282;&#x7801;&#xFF0C;JVM &#x901A;&#x8FC7;&#x89E3;&#x91CA;&#x5B57;&#x8282;&#x7801;&#x5C06;&#x5176;&#x7FFB;&#x8BD1;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x673A;&#x5668;&#x6307;&#x4EE4;&#xFF0C;&#x9010;&#x6761;&#x8BFB;&#x5165;&#xFF0C;&#x9010;&#x6761;&#x89E3;&#x91CA;&#x7FFB;&#x8BD1;&#x3002;&#x5F88;&#x663E;&#x7136;&#xFF0C;&#x7ECF;&#x8FC7;&#x89E3;&#x91CA;&#x6267;&#x884C;&#xFF0C;&#x5176;&#x6267;&#x884C;&#x901F;&#x5EA6;&#x5FC5;&#x7136;&#x4F1A;&#x6BD4;&#x53EF;&#x6267;&#x884C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x8282;&#x7801;&#x7A0B;&#x5E8F;&#x6162;&#x5F88;&#x591A;&#x3002;&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x6267;&#x884C;&#x901F;&#x5EA6;&#xFF0C;&#x5F15;&#x5165;&#x4E86; JIT &#x6280;&#x672F;&#x3002;</p>
+</li>
+<li><p>&#x5728;&#x8FD0;&#x884C;&#x65F6; JIT &#x4F1A;&#x628A;&#x7FFB;&#x8BD1;&#x8FC7;&#x7684;&#x673A;&#x5668;&#x7801;&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x4EE5;&#x5907;&#x4E0B;&#x6B21;&#x4F7F;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x4ECE;&#x7406;&#x8BBA;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;&#x91C7;&#x7528;&#x8BE5; JIT &#x6280;&#x672F;&#x53EF;&#x4EE5;&#x63A5;&#x8FD1;&#x4EE5;&#x524D;&#x7EAF;&#x7F16;&#x8BD1;&#x6280;&#x672F;</p>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -511,10 +520,14 @@
 
             
                 
-                <a href="../Algorithm/sort.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 排序算法">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Java虚拟机">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="garbage_collection_mechanism.html" class="navigation navigation-next " aria-label="Next page: 垃圾回收机制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -523,7 +536,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"结束","level":"1.9","depth":1,"previous":{"title":"排序算法","level":"1.8.1","depth":2,"path":"Algorithm/sort.md","ref":"Algorithm/sort.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"wiznote","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"serif","size":2},"highlight":{},"ga":{"token":"UA-39088953-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Java","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Java知识点总结","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"YUAN":"http://wangyuansxya.github.io/"},"tail":{"Java知识点总结":"http://wangyuansxya.github.io/gitbook-java/"},"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true,"weibo":true,"qq":true,"qrcode":true}},"introduction":{"path":"README.md","title":"Java知识点总结"},"gitbook":"*","description":"Java知识点总结"},"file":{"path":"end/README.md","mtime":"2020-02-25T03:16:51.245Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-25T03:42:01.371Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JIT编译器","level":"1.4.1","depth":2,"next":{"title":"垃圾回收机制","level":"1.4.2","depth":2,"path":"Jvm/garbage_collection_mechanism.md","ref":"Jvm/garbage_collection_mechanism.md","articles":[]},"previous":{"title":"Java虚拟机","level":"1.4","depth":1,"path":"Jvm/README.md","ref":"Jvm/README.md","articles":[{"title":"JIT编译器","level":"1.4.1","depth":2,"path":"Jvm/jit.md","ref":"Jvm/jit.md","articles":[]},{"title":"垃圾回收机制","level":"1.4.2","depth":2,"path":"Jvm/garbage_collection_mechanism.md","ref":"Jvm/garbage_collection_mechanism.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"wiznote","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"serif","size":2},"highlight":{},"ga":{"token":"UA-39088953-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"Java","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Java知识点总结","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"YUAN":"http://wangyuansxya.github.io/"},"tail":{"Java知识点总结":"http://wangyuansxya.github.io/gitbook-java/"},"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true,"weibo":true,"qq":true,"qrcode":true}},"introduction":{"path":"README.md","title":"Java知识点总结"},"gitbook":"*","description":"Java知识点总结"},"file":{"path":"Jvm/jit.md","mtime":"2020-02-25T03:06:26.795Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-25T03:42:01.371Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

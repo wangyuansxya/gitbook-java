@@ -15,7 +15,7 @@
     * [单例模式](JavaDesign/SingleTon.md)
     * [常用设计模式](JavaDesign/CommonDesign.md)
 * [MVC MVP MVVM](MVC/README.md)
-    * [MVC，MVP和MVVM的区别和联系](MVC/SingleTon.md)
+    * [MVC，MVP和MVVM的区别和联系](MVC/MVC_MVP_MVVM.md)
     * [常用开源框架](MVC/open_source_framework.md)
 * [git使用指南](Git/README.md)
     * [git常用命令](Git/git_cmd.md)
